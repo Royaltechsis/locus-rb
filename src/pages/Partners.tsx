@@ -112,7 +112,11 @@ export const Partners = () => {
 
                         <h3 className="text-2xl font-mono font-bold text-primary mb-6">&lt;Application_Node /&gt;</h3>
 
-                        <form onSubmit={handleSubmit} className="space-y-4">
+                        <form
+                             action="https://formspree.io/f/xwvendgl"
+                            method="POST"
+                            className="space-y-4"
+                        >
                             <div>
                                 <label className="block text-sm font-mono text-textMuted mb-1">Entity Name</label>
                                 <input

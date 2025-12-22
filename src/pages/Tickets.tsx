@@ -12,15 +12,10 @@ export const Tickets = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handlePaystack = () => {
-        // Mock Paystack integration
-        alert(`Initializing transaction...\nAmount: ₦5,000\nEmail: ${formData.email || 'guest@example.com'} \n\n(This is a mock payment flow)`);
-    };
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Form data:', formData);
-        alert('Message transmitted to the mainframe.');
+    const handleGetTickets = () => {
+        // Tix Integration
+        const tixUrl = "https://tix.africa/YOUR_EVENT_URL_HERE";
+        window.open(tixUrl, '_blank');
     };
 
     return (
@@ -54,14 +49,14 @@ export const Tickets = () => {
                     </ul>
 
                     <button
-                        onClick={handlePaystack}
+                        onClick={handleGetTickets}
                         className="w-full py-4 bg-primary text-background font-bold font-mono rounded hover:bg-white hover:scale-[1.02] transition-all duration-300 shadow-[0_0_20px_rgba(0,240,255,0.3)]"
                     >
-                        INITIALIZE_PAYMENT()
+                        GET_ACCESS_TOKEN()
                     </button>
 
                     <div className="mt-4 text-center">
-                        <p className="text-xs text-textMuted font-mono">Secured by Paystack</p>
+                        <p className="text-xs text-textMuted font-mono">Secured by Tix.africa</p>
                     </div>
                 </div>
 
@@ -69,7 +64,11 @@ export const Tickets = () => {
                 <div className="bg-surface/50 p-8 rounded-xl border border-white/5">
                     <h3 className="text-xl font-bold text-white mb-6">Transmit Message</h3>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form
+                         action="https://formspree.io/f/xwvendgl"
+                        method="POST"
+                        className="space-y-6"
+                    >
                         <div>
                             <label htmlFor="name" className="block text-sm font-mono text-textMuted mb-2">UID (Name)</label>
                             <input
@@ -80,6 +79,7 @@ export const Tickets = () => {
                                 onChange={handleInputChange}
                                 className="w-full bg-background border border-white/10 rounded p-3 text-textMain focus:border-primary focus:outline-none focus:shadow-[0_0_10px_rgba(0,240,255,0.2)] transition-all"
                                 placeholder="John Doe"
+                                required
                             />
                         </div>
 
@@ -93,6 +93,7 @@ export const Tickets = () => {
                                 onChange={handleInputChange}
                                 className="w-full bg-background border border-white/10 rounded p-3 text-textMain focus:border-primary focus:outline-none focus:shadow-[0_0_10px_rgba(0,240,255,0.2)] transition-all"
                                 placeholder="john@example.com"
+                                required
                             />
                         </div>
 
@@ -106,6 +107,7 @@ export const Tickets = () => {
                                 rows={4}
                                 className="w-full bg-background border border-white/10 rounded p-3 text-textMain focus:border-primary focus:outline-none focus:shadow-[0_0_10px_rgba(0,240,255,0.2)] transition-all"
                                 placeholder="Query regarding..."
+                                required
                             ></textarea>
                         </div>
 
