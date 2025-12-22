@@ -56,9 +56,7 @@ export const Partners = () => {
                             <div className="w-full md:w-1/3 flex justify-center">
                                 <div className="w-48 h-48 bg-black/50 border border-white/10 rounded-xl flex items-center justify-center p-4">
                                     {/* Placeholder for InMotion Logo */}
-                                    <span className="text-2xl font-bold font-mono text-white text-center">
-                                        &gt;_ INMOTION ICT
-                                    </span>
+                                    <img src="https://inmotion.ng/img/icon.svg" alt="InMotion ICT Logo" className="w-full h-full object-contain" />
                                 </div>
                             </div>
 
