@@ -17,6 +17,7 @@ const Navbar = () => {
                         <div className="ml-10 flex items-baseline space-x-8">
                             <NavLink to="/" active={isActive('/')}>_HOME</NavLink>
                             <NavLink to="/agenda" active={isActive('/agenda')}>_AGENDA</NavLink>
+                            <NavLink to="/partners" active={isActive('/partners')}>_PARTNERS</NavLink>
                             <NavLink to="/tickets" active={isActive('/tickets')}>_ACCESS_TOKEN</NavLink>
                         </div>
                     </div>
