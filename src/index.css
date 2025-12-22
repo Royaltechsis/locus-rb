@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-background text-textMain font-sans overflow-x-hidden;
+  }
+}
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #121212;
+  --color-primary: #00f0ff;
+  --color-primaryGlow: rgba(0, 240, 255, 0.5);
+  --color-secondary: #bf00ff;
+  --color-secondaryGlow: rgba(191, 0, 255, 0.5);
+  --color-textMain: #e0e0e0;
+  --color-textMuted: #a0a0a0;
+
+  --font-mono: "Fira Code", monospace;
+  --font-sans: "Inter", sans-serif;
+
+  --animate-glitch: glitch 1s linear infinite;
+  --animate-typewriter: typewriter 4s steps(40) 1s 1 normal both;
+
+  @keyframes glitch {
+
+    2%,
+    64% {
+      transform: translate(2px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+      transform: translate(-2px, 0) skew(0deg);
+    }
+
+    62% {
+      transform: translate(0, 0) skew(5deg);
+    }
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px var(--color-primaryGlow);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 10px var(--color-primaryGlow);
+  }
+}
