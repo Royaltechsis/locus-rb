@@ -15,13 +15,7 @@ export const Partners = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log('Partner Application:', formData);
-        alert('Application packet transmitted. We will ping you shortly.');
-        setIsModalOpen(false);
-        setFormData({ name: '', company: '', email: '', type: 'Partner', message: '' });
-    };
+
 
     return (
         <div className="container mx-auto px-4 py-12 max-w-5xl">
@@ -113,7 +107,7 @@ export const Partners = () => {
                         <h3 className="text-2xl font-mono font-bold text-primary mb-6">&lt;Application_Node /&gt;</h3>
 
                         <form
-                             action="https://formspree.io/f/xwvendgl"
+                            action="https://formspree.io/f/xwvendgl"
                             method="POST"
                             className="space-y-4"
                         >
