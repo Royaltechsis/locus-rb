@@ -82,7 +82,7 @@ export const Partners = () => {
             <div className="border-t border-white/10 pt-20 text-center">
                 <h2 className="text-3xl font-mono font-bold text-primary mb-6">JOIN THE NETWORK &gt;_</h2>
                 <p className="text-textMuted max-w-2xl mx-auto mb-10 leading-relaxed">
-                    We still have limited slots available for fuel (energy drinks/snacks) and infrastructure partners who want to put their brand in front of 25+ filtered, high-competence tech professionals this Saturday.
+                    We still have slots available for fuel (energy drinks/snacks) and infrastructure partners who want to put their brand in front of filtered, high-competence tech professionals this Saturday.
                 </p>
 
                 <button

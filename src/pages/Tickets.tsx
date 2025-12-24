@@ -14,7 +14,7 @@ export const Tickets = () => {
 
     const handleGetTickets = () => {
         // Tix Integration
-        const tixUrl = "https://tix.africa/YOUR_EVENT_URL_HERE";
+        const tixUrl = "https://tix.africa/discover/locus-rb";
         window.open(tixUrl, '_blank');
     };
 
@@ -38,7 +38,7 @@ export const Tickets = () => {
                             <span className="text-secondary mr-2">✓</span> Full Event Access
                         </li>
                         <li className="flex items-center">
-                            <span className="text-secondary mr-2">✓</span> Swag Pack (Stickers + Tee)
+                            <span className="text-secondary mr-2">✓</span> SWAGS
                         </li>
                         <li className="flex items-center">
                             <span className="text-secondary mr-2">✓</span> Food & Drinks
